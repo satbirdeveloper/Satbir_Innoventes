@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">InnoventesApp</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_string">S.</string>
+    <string name="reg_info">First of the few steps to set you up with a Bank Account</string>
+    <string name="pan_label_text">PAN NUMBER</string>
+    <string name="dob_label_text">BIRTHDATE</string>
+    <string name="dob_month">MM</string>
+    <string name="dob_date">DD</string>
+
+    <string name="dob_year">YYYY</string>
+    <string name="next_button_text">NEXT</string>
+    <string name="no_pan_text">I don\'t have a PAN</string>
+    <string name="description_text_start">Providing PAN &amp; Date of Birth helps us find and
+        fetch your KYC from a central registry by the</string>
+    <string name="description_text_end">Government of India.</string>
+    <string name="learn_more_text"> Learn more</string>
+
+    <string name="submitted_string">Details submitted successfully</string>
+    <string name="pan_number_error">Enter a valid pan number</string>
+    <string name="date_format_warning">Enter a valid DOB as DD MM YYYY</string>
+    <string name="age_warning">Age must be greater than 18 years</string>
+
+
+
+</resources>

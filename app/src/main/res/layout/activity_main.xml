@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegistrationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/start_margin"
+        android:paddingTop="@dimen/top_margin"
+        android:text="@string/title_string"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/orange">
+    </TextView>
+
+        <TextView
+            android:id="@+id/regInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            android:paddingStart="@dimen/start_margin"
+            android:paddingTop="@dimen/top_margin"
+            android:text="@string/reg_info"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:id="@+id/panLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/regInfoText"
+            android:paddingStart="@dimen/start_margin"
+           android:layout_marginTop="@dimen/large_top_margin"
+            android:text="@string/pan_label_text"
+            android:textSize="13sp"
+            android:textColor="@color/black">
+        </TextView>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/panNumberLayoutEditText"
+            style="@style/OutlinedRoundedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/panLabelText"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginEnd="@dimen/start_margin"
+            android:layout_marginTop="@dimen/top_margin"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/panNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:paddingStart="5dp"
+                android:background="@drawable/pan_selector_states"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/birthDateLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/panNumberLayoutEditText"
+            android:paddingStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/large_top_margin"
+            android:text="@string/dob_label_text"
+            android:textSize="13sp"
+            android:textColor="@color/black">
+        </TextView>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dayLayoutEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OutlinedRoundedBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/monthLayoutEditText"
+            app:layout_constraintTop_toBottomOf="@id/birthDateLabelText"
+            android:layout_marginTop="@dimen/top_margin"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dayEditText"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:inputType="number"
+                android:gravity="center"
+
+                android:background="@drawable/dob_selector_states"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/monthLayoutEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OutlinedRoundedBox"
+            app:layout_constraintStart_toEndOf="@id/dayLayoutEditText"
+            app:layout_constraintEnd_toStartOf="@id/yearLayoutEditText"
+            app:layout_constraintTop_toBottomOf="@id/birthDateLabelText"
+            android:layout_marginTop="@dimen/top_margin"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/monthEditText"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:inputType="number"
+                android:gravity="center"
+                android:background="@drawable/dob_selector_states"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/yearLayoutEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OutlinedRoundedBox"
+            app:layout_constraintStart_toEndOf="@id/monthLayoutEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birthDateLabelText"
+            android:layout_marginTop="@dimen/top_margin"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/yearEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:inputType="number"
+                android:gravity="center"
+                android:background="@drawable/dob_selector_states"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dobWarningTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dayLayoutEditText"
+            android:layout_marginTop="@dimen/top_margin"
+            android:paddingLeft="@dimen/start_margin"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:text="@string/date_format_warning">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/descriptionTextStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dobWarningTextView"
+            android:paddingStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/very_large_top_margin"
+            android:text="@string/description_text_start"
+            android:textSize="18sp"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:id="@+id/descriptionTextEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTextStart"
+            android:paddingStart="@dimen/start_margin"
+            android:text="@string/description_text_end"
+            android:textSize="18sp"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:id="@+id/learnMoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/descriptionTextEnd"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTextStart"
+            android:paddingStart="@dimen/start_margin"
+            android:text="@string/learn_more_text"
+            android:textSize="18sp"
+            android:textColor="@color/purple_200">
+        </TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextButton"
+            style="@style/InnoventesAppMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/learnMoreText"
+            android:layout_marginTop="@dimen/large_top_margin"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginEnd="@dimen/start_margin"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/next_button_text">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <TextView
+            android:id="@+id/noPanText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nextButton"
+            android:gravity="center"
+            android:padding="@dimen/margin"
+            android:text="@string/no_pan_text"
+            android:textSize="20sp"
+            android:textColor="@color/purple_200">
+        </TextView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

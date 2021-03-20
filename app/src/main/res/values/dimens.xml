@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="start_margin">10dp</dimen>
+    <dimen name="large_start_margin">15dp</dimen>
+    <dimen name="top_margin">10dp</dimen>
+    <dimen name="margin">20dp</dimen>
+    <dimen name="large_top_margin">30dp</dimen>
+    <dimen name="very_large_top_margin">70dp</dimen>
+    <dimen name="margin_within_dob">30dp</dimen>
+
+
+</resources>
